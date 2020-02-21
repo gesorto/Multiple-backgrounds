@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+    background-image: url("man.png"), url("woman.png"), url("car.png"), linear-gradient(180deg, rgba(24,36,198,1) 1%, rgba(24,36,198,1) 4%, rgba(50,151,203,1) 46%, rgba(183,220,237,1) 89%), url("maxl-duzij-qAjJk-un3BI-unsplash.jpg");
+    width: 85vw;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: contain, contain, contain, cover;
+    background-position: right, left, center;  
+}
+
+h2{
+    color: blue;
+}
+
+h1{
+    border-bottom: 2px dashed;
+}
+
+@media(max-width: 900px){
+    .box{
+        background-image: url("car.png"), linear-gradient(180deg, rgba(24,36,198,1) 1%, rgba(24,36,198,1) 4%, rgba(50,151,203,1) 46%, rgba(183,220,237,1) 89%), url("maxl-duzij-qAjJk-un3BI-unsplash.jpg");
+        width: 85vw;
+        height: 60vh;
+        background-repeat: no-repeat;
+        background-size: contain, cover;
+        background-position: center;
+    }
+}
