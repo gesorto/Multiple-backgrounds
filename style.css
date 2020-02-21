@@ -8,14 +8,24 @@ body{
     flex-direction: column;
     align-items: center;
 }
-
+/* The order of the images matter. */
+/* The images placed at the top of the stack have to be .png */ 
+/* In this  case we have the following structure or stack: read it from top to bottom*/
+/* woman.png upon car.png */
+/* man.png upon the gradient */
+/* the gradient is the last background and it covers the complete box */
 .box{
+/*   It is totally right combine gradients with images   */
     background-image: url("man.png"), url("woman.png"), url("car.png"), linear-gradient(180deg, rgba(24,36,198,1) 1%, rgba(24,36,198,1) 4%, rgba(50,151,203,1) 46%, rgba(183,220,237,1) 89%), url("maxl-duzij-qAjJk-un3BI-unsplash.jpg");
     width: 85vw;
     height: 60vh;
+/* All the 3 layers will be no-repeat */
     background-repeat: no-repeat;
+/*   Each comma separated element will apply to its respective background layer   */
+/* for example: the property background-sixe for car.png will be containt */
     background-size: contain, contain, contain, cover;
-    background-position: right, left, center;  
+/* It is the same here; left will apply to woman.png */
+    background-position: right, left, center, center;  
 }
 
 h2{
